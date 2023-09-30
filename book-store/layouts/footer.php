@@ -42,11 +42,11 @@
           </div>
           <div class="col-sm-3">
             <h6 class="text-uppercase text-light mb-4">your account</h6>
-            <p><i class="text-secondary" href="">Shop</i></p>
-            <p><i class="text-secondary" href="">My Orders</i></p>
-            <p><i class="text-secondary" href="">Gift Collections</i></p>
-            <p><i class="text-secondary" href="">Purchase Cards</i></p>
-            <p><i class="text-secondary" href="">FAQs</i></p>
+            <p><i class="text-secondary" href="#">Shop</i></p>
+            <p><i class="text-secondary" href="#">My Orders</i></p>
+            <p><i class="text-secondary" href="#">Gift Collections</i></p>
+            <p><i class="text-secondary" href="#">Purchase Cards</i></p>
+            <p><i class="text-secondary" href="#">FAQs</i></p>
           </div>
           <div class="col-sm-3">
             <h6 class="text-uppercase text-light">best seller</h6>
@@ -78,10 +78,10 @@
           <div class="col-sm-6">
             <div class="d-flex w-50 justify-content-between">
 
-              <img src="../Assets/images/payment_01.jpg" alt="">
-              <img src="../Assets/images/payment_02.jpg" alt="">
-              <img src="../Assets/images/payment_03.jpg" alt="">
-              <img src="../Assets/images/payment_04.jpg" alt="">
+              <img src="../Assets/images/payment_01.jpg" alt="images not found">
+              <img src="../Assets/images/payment_02.jpg" alt="images not found">
+              <img src="../Assets/images/payment_03.jpg" alt="images not found">
+              <img src="../Assets/images/payment_04.jpg" alt="images not found">
             </div>
           </div>
           <div class="col-sm-6 text-end">
@@ -95,5 +95,5 @@
   <!-- FOOTER END -->
 
   </body>
-  
-</html>
+
+  </html>
