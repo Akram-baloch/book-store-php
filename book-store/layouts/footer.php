@@ -60,24 +60,18 @@
                 <i class="text-danger bi-star-fill h5"></i>
                 <i class="text-secondary bi-star h5"></i>
                 <p>$49.00 - $60.00</p>
-
               </div>
-
             </div>
-
           </div>
         </div>
       </div>
 
     </div>
     <div class="container-fluid bg-black">
-
       <div class="container p-5">
-
         <div class="row">
           <div class="col-sm-6">
             <div class="d-flex w-50 justify-content-between">
-
               <img src="../Assets/images/payment_01.jpg" alt="images not found">
               <img src="../Assets/images/payment_02.jpg" alt="images not found">
               <img src="../Assets/images/payment_03.jpg" alt="images not found">
@@ -91,9 +85,7 @@
       </div>
     </div>
   </footer>
-
   <!-- FOOTER END -->
-
   </body>
 
   </html>
