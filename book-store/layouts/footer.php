@@ -78,10 +78,10 @@
           <div class="col-sm-6">
             <div class="d-flex w-50 justify-content-between">
 
-              <img src="images/payment_01.jpg" alt="">
-              <img src="images/payment_02.jpg" alt="">
-              <img src="images/payment_03.jpg" alt="">
-              <img src="images/payment_04.jpg" alt="">
+              <img src="../Assets/images/payment_01.jpg" alt="">
+              <img src="../Assets/images/payment_02.jpg" alt="">
+              <img src="../Assets/images/payment_03.jpg" alt="">
+              <img src="../Assets/images/payment_04.jpg" alt="">
             </div>
           </div>
           <div class="col-sm-6 text-end">
