@@ -1,0 +1,34 @@
+body {
+    background-color:#f1f1f1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* /* HERE WE ADD HOVER ON NAVBAR */
+.navbar-nav .nav-link {
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-item.active .nav-link::after {
+    width: 100%;
+}
+
+/* HERE WE APPLY HOVER ON CARD BOX  */
+.card-hover:hover {
+    box-shadow: -1px 11px 18px 4px rgba(0, 0, 0, 0.75);
+    transform: scale(1.1);
+    cursor: pointer;
+}

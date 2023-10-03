@@ -15,7 +15,7 @@
         <li class="nav-item">
           <a class="nav-link fw-bold" aria-current="page" href="#">PAGES</a>
         </li>
-        <img src="../assets/images/logo-dark.png" alt="Image not found">
+        <img src="assets/images/logo-dark.png" alt="Image not found">
         <li class="nav-item">
           <a class="nav-link fw-bold" aria-current="page" href="#">ABOUT</a>
         </li>

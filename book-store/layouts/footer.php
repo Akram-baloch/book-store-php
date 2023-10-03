@@ -51,7 +51,7 @@
           <div class="col-sm-3">
             <h6 class="text-uppercase text-light">best seller</h6>
             <div class="d-flex justify-content-between align-items-center mt-4 text-light">
-              <img class="w-25" src="../Assets/images/f-img.jpg" alt="">
+              <img class="w-25" src="assets/images/f-img.jpg" alt="">
               <div class="">
                 <p>Henry & The Good Dog</p>
                 <i class="text-danger bi-star-fill h5"></i>
@@ -72,10 +72,10 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="d-flex w-50 justify-content-between">
-              <img src="../Assets/images/payment_01.jpg" alt="images not found">
-              <img src="../Assets/images/payment_02.jpg" alt="images not found">
-              <img src="../Assets/images/payment_03.jpg" alt="images not found">
-              <img src="../Assets/images/payment_04.jpg" alt="images not found">
+              <img src="assets/images/payment_01.jpg" alt="images not found">
+              <img src="assets/images/payment_02.jpg" alt="images not found">
+              <img src="assets/images/payment_03.jpg" alt="images not found">
+              <img src="assets/images/payment_04.jpg" alt="images not found">
             </div>
           </div>
           <div class="col-sm-6 text-end">
@@ -85,7 +85,3 @@
       </div>
     </div>
   </footer>
-  <!-- FOOTER END -->
-  </body>
-
-  </html>
