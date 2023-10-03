@@ -4,19 +4,19 @@
 <?php include "layouts/header.php" ?>
 
 <body>
-    <?php include "layouts/navbar.php" ?>
+  <?php include "layouts/navbar.php" ?>
 
-      <!---CROUSAL OPEN -->
+  <!---CROUSAL OPEN -->
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="assets/images/slider-01.png" class="d-block w-100" alt="...">
+        <img src="assets/images/slider-01.png" class="d-block w-100" alt="image not found">
       </div>
       <div class="carousel-item">
-        <img src="assets/images/slider-02.png" class="d-block w-100" alt="...">
+        <img src="assets/images/slider-02.png" class="d-block w-100" alt="image not found">
       </div>
       <div class="carousel-item">
-        <img src="assets/images/slider-03.png" class="d-block w-100" alt="...">
+        <img src="assets/images/slider-03.png" class="d-block w-100" alt="image not found">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -36,11 +36,11 @@
   <!-- CART BOX START -->
   <div class="container pt-5 mt-4">
     <div class="row">
-    <div class="col-md-3 col-sm-6 col-6">
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b1.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b1.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -57,12 +57,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b2.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b2.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -79,12 +79,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b3.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b3.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -101,12 +101,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b4.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b4.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -123,12 +123,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b5.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b5.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -145,12 +145,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b6.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b6.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -167,12 +167,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b7.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b7.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -189,12 +189,12 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-6">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
         <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
           <div class="text-center">
-            <a href="./detail-pages/detail-1.html">
-              <img src="assets/images/b1.jpg" class="w-75" alt="">
+            <a href="#">
+              <img src="assets/images/b1.jpg" class="w-75" alt="image not found">
             </a>
           </div>
           <div>
@@ -211,12 +211,12 @@
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
-  </div>
   <!-- CART BOX END -->
-    
-    <?php include "layouts/footer.php" ?>
-</body>
-</html>
 
+  <?php include "layouts/footer.php" ?>
+</body>
+
+</html>
