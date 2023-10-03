@@ -51,7 +51,7 @@
           <div class="col-sm-3">
             <h6 class="text-uppercase text-light">best seller</h6>
             <div class="d-flex justify-content-between align-items-center mt-4 text-light">
-              <img class="w-25" src="assets/images/f-img.jpg" alt="">
+              <img class="w-25" src="assets/images/f-img.jpg" alt="image not found">
               <div class="">
                 <p>Henry & The Good Dog</p>
                 <i class="text-danger bi-star-fill h5"></i>
