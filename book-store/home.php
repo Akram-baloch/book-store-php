@@ -84,7 +84,7 @@
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-                <img src="assets/images/b3.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b3.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$19.00</h4>
@@ -100,13 +100,13 @@
               </div>
             </div>
           </div>
-          </a>
+        </a>
       </div>
       <div class="col-md-3 col-sm-6 col-6">
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-                <img src="assets/images/b4.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b4.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$18.00</h4>
@@ -128,7 +128,7 @@
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-                <img src="assets/images/b5.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b5.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$12.00</h4>
@@ -150,7 +150,7 @@
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-                <img src="assets/images/b6.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b6.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$22.00</h4>
@@ -172,7 +172,7 @@
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-                <img src="assets/images/b7.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b7.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$24.00</h4>
@@ -194,7 +194,7 @@
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-                <img src="assets/images/b1.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b1.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$21.00</h4>
