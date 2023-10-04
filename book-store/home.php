@@ -194,7 +194,7 @@
         <a class="text-decoration-none text-dark" href="detail.php">
           <div class="card-hover bg-white pb-2 p-3 mb-5 rounded-2">
             <div class="text-center">
-              <img src="assets/images/b1.jpg" class="w-75" alt="image not found">
+              <img src="assets/images/b8.jpg" class="w-75" alt="image not found">
             </div>
             <div>
               <h4 class="opacity-75 mt-1 text-center">$21.00</h4>

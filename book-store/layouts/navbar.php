@@ -13,7 +13,7 @@
           <a class="nav-link fw-bold" aria-current="page" href="#">FEATURE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" aria-current="page" href="#">PAGES</a>
+          <a class="nav-link fw-bold" aria-current="page" href="books.php">BOOKS</a>
         </li>
         <a aria-current="page" href="home.php">
           <img src="assets/images/logo-dark.png" alt="Image not found">
