@@ -23,7 +23,7 @@
           <a class="nav-link fw-bold" aria-current="page" href="contactUs.php">CONTACT</a>
         </li>
         <div class="d-flex gap-2">
-          <a class="text-decoration-none" href="">
+          <a class="text-decoration-none" href="shoppingCart.php">
             <span id="cartCountSpan" class="cart-count"></span>
             <i class="bi-cart3 text-dark h5"></i>
           </a>
