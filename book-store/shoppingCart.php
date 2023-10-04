@@ -9,7 +9,7 @@
     <div class="container mt-5 pb-5 overflow-hidden">
         <h1 class="text-center bg-secondary text-light py-4">Shopping Cart</h1>
         <table class="table table-striped table-hover table-bordered border-white text-center">
-            <thead class="py-2">
+            <thead class="h5">
                 <tr>
                     <th scope="col">Id</th>
                     <th colspan="2">Item</th>
