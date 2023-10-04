@@ -9,7 +9,7 @@
     <div class="container mt-5 pt-3 w-75">
         <div class="row">
             <div class="col-lg-6">
-                <img src="assets/images/b1.jpg" class="mt-4" alt="">
+                <img src="assets/images/b1.jpg" class="mt-4" alt="image not found">
             </div>
             <div class="col-lg-6">
                 <h1 class="my-4 display-5">Sam & Dave dig a Hole</h1>
