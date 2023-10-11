@@ -17,3 +17,10 @@
     color: rgb(105, 232, 105);
     cursor: pointer;
 }
+.head i {
+    font-size: 40px;
+}
+.head i:hover {
+    color: rgb(105, 232, 105);
+    cursor: pointer;
+}

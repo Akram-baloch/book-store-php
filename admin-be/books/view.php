@@ -12,8 +12,17 @@
                 </ol>
             </nav>
         </div>
-        <div class="container">
-
+        <div class="container head">
+            <div class="row text-light bg-info border  rounded mb-2 p-2">
+                <div class="col-sm-5">
+                    <a href="index.php">
+                        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-sm-7">
+                    <h2>Create</h2>
+                </div>
+            </div>
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="row">
