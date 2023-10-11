@@ -1,0 +1,19 @@
+.custom-form {
+    background-color: #E5F2E5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Browse";
+}
+
+.custom-form i {
+    font-size: 40px;
+}
+
+.custom-form i:hover {
+    color: rgb(105, 232, 105);
+    cursor: pointer;
+}
