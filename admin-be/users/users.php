@@ -4,19 +4,19 @@
     <div id="content">
         <?php include "../layouts/navbar.php" ?>
         <div class="container">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Books</li>
-                        </ol>
-                    </nav>
-                </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Users</li>
+                </ol>
+            </nav>
+        </div>
         <div class="container">
             <div class="table-wrapper">
                 <div class="table-title bg-info">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Books</h2>
+                            <h2>Users</h2>
                         </div>
                         <div class="col-sm-6">
                             <a href="create.php" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i> <span>Add New </span></a>
@@ -26,31 +26,23 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Images</th>
+                            <th>Id</th>
                             <th>Name</th>
-                            <th>Author</th>
-                            <th>Category</th>
-                            <th>Description</th>
-                            <th>Quantity</th>
-                            <th>Amount</th>
+                            <th>Email</th>
+                            <th>Contact</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>img</td>
-                            <td>javascript</td>
-                            <td>jhon</td>
-                            <td>History</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>10</td>
-                            <td>$55</td>
+                            <td>Sarfraz</td>
+                            <td>sarfraz@gmail</td>
+                            <td>03001231234</td>
                             <td class="col-md-2">
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" title="Edit"></i></a>
                                 <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true" data-toggle="tooltip" title="Delete"></i></a>
-                                <a href="view.php" class="" ><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
+                                <a href="view.php" class=""><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
                             </td>
 
 
