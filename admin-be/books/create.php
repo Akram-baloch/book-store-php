@@ -59,5 +59,6 @@
                 <button type="submit" class="btn btn-info">Submit</button>
             </form>
         </div>
+        <?php include "../layouts/footer.php" ?>
     </div>
 </div>

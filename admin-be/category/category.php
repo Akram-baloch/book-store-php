@@ -4,13 +4,13 @@
     <div id="content">
         <?php include "../layouts/navbar.php" ?>
         <div class="container">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Categories</li>
-                        </ol>
-                    </nav>
-                </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Categories</li>
+                </ol>
+            </nav>
+        </div>
         <div class="container">
             <div class="table-wrapper">
                 <div class="table-title bg-info">
@@ -38,10 +38,8 @@
                             <td class="col-md-2">
                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" title="Edit"></i></a>
                                 <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true" data-toggle="tooltip" title="Delete"></i></a>
-                                <a href="view.php" class="" ><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
+                                <a href="view.php" class=""><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
                             </td>
-
-
                         </tr>
                     </tbody>
                 </table>
@@ -150,6 +148,7 @@
                 </div>
             </div>
         </div>
+        <?php include "../layouts/footer.php" ?>
     </div>
 </div>
 <script src="../assets/js/script.js"></script>

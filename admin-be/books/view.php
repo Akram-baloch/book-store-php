@@ -106,5 +106,6 @@
                 </li>
             </ul>
         </div>
+        <?php include "../layouts/footer.php" ?>
     </div>
 </div>
