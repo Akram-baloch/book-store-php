@@ -1,4 +1,7 @@
-<?php include '../layouts/header.php' ?>
+<?php
+
+include '../layouts/header.php';
+ ?>
 <div class="wrapper">
     <?php include '../layouts/sidenav.php' ?>
     <div id="content">
@@ -10,7 +13,7 @@
                     <div class="card bg-c-blue order-card">
                         <div class="card-block">
                             <h5 class="m-b-20">Books</h5>
-                            <h2 class="text-right py-3 "><i class="fa fa-book f-left"></i><span>486</span></h2>
+                            <h2 class="text-right py-3"><i class="fa fa-book f-left"></i><span>486</span></h2>
                         </div>
                     </div>
                 </div>
@@ -48,10 +51,10 @@
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-6">
-                <div id="piechart" class="" style="width: 100%; height: 400px;"></div>
+                    <div id="piechart" class="" style="width: 100%; height: 400px;"></div>
                 </div>
                 <div class="col-md-6">
-                <div id="piechart_3d" style="width: 100%; height: 400px;"></div>
+                    <div id="piechart_3d" style="width: 100%; height: 400px;"></div>
                 </div>
             </div>
         </div>
@@ -97,51 +100,56 @@
     }
 </script>
 <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
+    function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+            ['Task', 'Hours per Day'],
+            ['Work', 11],
+            ['Eat', 2],
+            ['Commute', 2],
+            ['Watch TV', 2],
+            ['Sleep', 7]
         ]);
 
         var options = {
-          title: 'My Daily Activities'
+            title: 'My Daily Activities'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
         chart.draw(data, options);
-      }
-    </script>
-     <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
+    }
+</script>
+<script type="text/javascript">
+    google.charts.load("current", {
+        packages: ["corechart"]
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+            ['Task', 'Hours per Day'],
+            ['Work', 11],
+            ['Eat', 2],
+            ['Commute', 2],
+            ['Watch TV', 2],
+            ['Sleep', 7]
         ]);
 
         var options = {
-          title: 'My Daily Activities',
-          is3D: true,
+            title: 'My Daily Activities',
+            is3D: true,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
         chart.draw(data, options);
-      }
-    </script>
+    }
+</script>
 <script src="../assets/js/script.js"></script>
 </body>
 

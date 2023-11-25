@@ -2,15 +2,18 @@
 <div class="wrapper">
     <?php include '../layouts/sidenav.php' ?>
     <div id="content">
-        <?php include "../layouts/navbar.php" ?>
+        <?php include "../layouts/navbar.php";
+
+        include "../../config/connection.php";
+        ?>
         <div class="container">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Books</li>
-                        </ol>
-                    </nav>
-                </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Books</li>
+                </ol>
+            </nav>
+        </div>
         <div class="container">
             <div class="table-wrapper">
                 <div class="table-title bg-info">
@@ -26,35 +29,54 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>Id</th>
                             <th>Images</th>
                             <th>Name</th>
                             <th>Author</th>
                             <th>Category</th>
                             <th>Description</th>
-                            <th>Quantity</th>
                             <th>Amount</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>img</td>
-                            <td>javascript</td>
-                            <td>jhon</td>
-                            <td>History</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>10</td>
-                            <td>$55</td>
-                            <td class="col-md-2">
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" title="Edit"></i></a>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true" data-toggle="tooltip" title="Delete"></i></a>
-                                <a href="view.php" class="" ><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
-                            </td>
+                        <?php
+                        $books = "SELECT books.*,authors.name AS a_name,categories.name AS c_name FROM books
+                        JOIN authors ON books.author_id = authors.id
+                        JOIN categories ON books.category_id = categories.id";
 
+                        $book_qry = mysqli_query($conn, $books);
+                        if (mysqli_num_rows($book_qry) > 0) {
 
-                        </tr>
+                            foreach ($book_qry as $index => $book) {
+                        ?>
+                                <tr>
+                                    <td><?= $index + 1 ?></td>
+                                    <td><img src="../upload/<?= $book['image'] ?>" width="60px" height="60px"></td>
+                                    <td><?= $book['name'] ?></td>
+                                    <td><?= $book['a_name'] ?></td>
+                                    <td><?= $book['c_name'] ?></td>
+                                    <td><?= $book['description'] ?></td>
+                                    <td><?= $book['price'] ?></td>
+                                    <td class="col-md-2">
+                                        <a href="edit.php?id=<?= $book['id'] ?>" class="edit"><i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" title="Edit"></i></a>
+                                        <a href="delete.php?id=<?= $book['id'] ?>" class="delete"><i class="fa fa-trash-o" onclick="return confirm('Are you sure you want to delete this data')" aria-hidden="true" data-toggle="tooltip" title="Delete"></i></a>
+                                        <a href="view.php?id=<?= $book['id']?>" class=""><i class="fa fa-eye" aria-hidden="true" data-toggle="tooltip" title="view"></i></a>
+                                    </td>
+                                </tr>
+
+                        <?php
+                            }
+                        }else{
+                            ?>
+                            <tr>
+                                <td colspan="8" class="bg-light">No Record Found</td>
+                            </tr>
+                            <?php
+
+                        }
+                        ?>
+
                     </tbody>
                 </table>
                 <div class="clearfix">
@@ -68,97 +90,6 @@
                         <li class="page-item"><a href="#" class="page-link">5</a></li>
                         <li class="page-item"><a href="#" class="page-link">Next</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Edit Modal HTML -->
-        <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Model</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Models</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Status</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Schedule</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Edit Modal HTML -->
-        <div id="editEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Edit Employee</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Models</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Status</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Schedule</label>
-                                <textarea class="form-control" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>Amount</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Delete Modal HTML -->
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Delete Model</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sure you want to delete these Records?</p>
-                            <p class="text-warning"><small>This action cannot be undone.</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-danger" value="Delete">
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

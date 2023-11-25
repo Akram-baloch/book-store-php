@@ -1,8 +1,12 @@
-<?php include '../layouts/header.php' ?>
+<?php
+include "../../config/connection.php";
+include '../layouts/header.php';
+?>
 <div class="wrapper">
     <?php include '../layouts/sidenav.php' ?>
     <div id="content">
-        <?php include "../layouts/navbar.php" ?>
+        <?php include "../layouts/navbar.php";
+        ?>
         <div class="container ">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-light">
@@ -12,9 +16,9 @@
                 </ol>
             </nav>
         </div>
-        <div class="container mt-5">
-            <form class="custom-form">
-                <div class="row text-light bg-info border  rounded mb-2 p-2">
+        <div class="container">
+            <form class="custom-form" action="uplaod.php" method="post" enctype="multipart/form-data">
+                <div class="row text-light bg-info border rounded mb-2 p-2">
                     <div class="col-sm-5">
                         <a href="index.php">
                             <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
@@ -25,39 +29,63 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="id">ID:</label>
-                        <input type="text" class="form-control" id="id" name="id">
-                    </div>
-
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name">
+                        <input type="text" class="form-control" name="name">
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="author">Author:</label>
-                        <input type="text" class="form-control" id="author" name="author">
+                    <div class="form-group col-md-12">
+                        <label for="author">Authors:</label>
+                        <select class="form-control" required name="author">
+                        <option>--Select Authors--</option>
+
+                            <?php
+                            $authorQuery = "SELECT * FROM authors";
+                            $authorResult = mysqli_query($conn, $authorQuery);
+
+                            foreach ($authorResult as $authorRow) {
+                            ?>
+                                <option value="<?= $authorRow['id']; ?>"><?= $authorRow['name']; ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                         <label for="category">Category:</label>
-                        <input type="text" class="form-control" id="category" name="category">
+                        <select class="form-control" required name="category">
+                        <option>--Select Category--</option>
+                        <?php
+                        $categoryQuery = "SELECT * FROM categories";
+                        $categoryResult=mysqli_query($conn,$categoryQuery);
+                        foreach ($categoryResult as $categoryRow) {
+                            ?>
+                            <option value="<?php echo $categoryRow['id']?>"><?php echo $categoryRow['name']?></option>
+                            <?php
+                        }
+                        ?>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="image">Image:</label>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="image" name="image">
+                        <input type="file" class="custom-file-input" name="image">
                         <label class="custom-file-label" for="image">Choose file</label>
                     </div>
                 </div>
                 <div class="form-group">
+                        <label for="name">Price:</label>
+                        <input type="text" class="form-control" name="price">
+                    </div>
+                <div class="form-group">
                     <label for="description">Description:</label>
-                    <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+                    <textarea class="form-control" name="description" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="submit" name="submit" class="btn btn-info">Submit</button>
             </form>
+
         </div>
         <?php include "../layouts/footer.php" ?>
     </div>

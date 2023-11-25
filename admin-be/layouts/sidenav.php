@@ -7,9 +7,6 @@
             <li>
                 <a href="../dashboard/dashboard.php"><i class="fa fa-tachometer mx-2"></i>Dashbord</a>
             </li>
-            <!-- <li class="active">
-                    <a href=""><i class="fa fa-home mx-2"></i>Home</a>
-                </li> -->
             <li>
                 <a href="../books/index.php"><i class="fa fa-book mx-2"></i>Books</a>
             </li>
@@ -17,7 +14,7 @@
                 <a href="../category/category.php"><i class="fa fa-list-alt mx-2"></i>Categories</a>
             </li>
             <li>
-                <a href="../author/author.php"><i class="fa fa-pencil mx-2"></i>Authers</a>
+                <a href="../author/author.php"><i class="fa fa-pencil mx-2"></i>Authors</a>
             </li>
             <li>
                 <a href=""><i class="fa fa-shopping-cart mx-2"></i>Orders</a>
