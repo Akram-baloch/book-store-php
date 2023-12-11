@@ -71,8 +71,8 @@ include '../layouts/header.php';
                 <div class="form-group">
                     <label for="image">Image:</label>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="image">
-                        <label class="custom-file-label" for="image">Choose file</label>
+                        <input type="file" class="custom-file-input" name="image" id="customFile" onchange="updateFileName(this)">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -90,3 +90,10 @@ include '../layouts/header.php';
         <?php include "../layouts/footer.php" ?>
     </div>
 </div>
+
+<script>
+    function updateFileName(input) {
+        var fileName = input.files[0].name;
+        document.querySelector('.custom-file-label').textContent = fileName;
+    }
+</script>

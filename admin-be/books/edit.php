@@ -23,11 +23,10 @@ include '../layouts/header.php';
 
                 $book_query = "SELECT * FROM books where id = $book_id";
                 $books = mysqli_query($conn, $book_query);
-                // $books = mysqli_num_rows($result);
                 foreach ($books as $book) {
             ?>
 
-                    <form class="custom-form" method="post" enctype="multipart/form-data">
+                    <form class="custom-form" action="update.php" method="post" enctype="multipart/form-data">
                         <div class="row text-light bg-info border rounded mb-2 p-2">
                             <div class="col-sm-5">
                                 <a href="index.php">
@@ -39,6 +38,7 @@ include '../layouts/header.php';
                             </div>
                         </div>
                         <div class="form-row">
+                        <input type="hidden" name="book_id" value="<?= $book['id'] ?>">
                             <div class="form-group col-md-12">
                                 <label for="name">Name:</label>
                                 <input type="text" class="form-control" value="<?= $book['name'] ?>" name="name">
@@ -78,9 +78,10 @@ include '../layouts/header.php';
                         </div>
                         <div class="form-group">
                             <label for="image">Image:</label>
+                            <input type="hidden" name="current_image" value="<?= $book['image'] ?>">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" value="<?= $book['image'] ?>" name="image">
-                                <label class="custom-file-label" for="image">Choose file</label>
+                                <input type="file" class="custom-file-input" value="<?= $book['image'] ?>" name="image" id="customFile" onchange="updateFileName(this)">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -91,7 +92,7 @@ include '../layouts/header.php';
                             <label for="description">Description:</label>
                             <textarea class="form-control" name="description" rows="3"><?= $book['description'] ?></textarea>
                         </div>
-                        <button type="submit" name="submit" class="btn btn-info">Submit</button>
+                        <button type="submit" name="update" class="btn btn-info">Submit</button>
                     </form>
             <?php }
             } ?>
@@ -99,3 +100,9 @@ include '../layouts/header.php';
         <?php include "../layouts/footer.php" ?>
     </div>
 </div>
+<script>
+function updateFileName(input) {
+        var fileName = input.files[0].name;
+        document.querySelector('.custom-file-label').textContent = fileName;
+    }
+</script>

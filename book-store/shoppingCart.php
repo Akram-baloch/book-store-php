@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "layouts/header.php" ?>
+<?php
+include "layouts/header.php";
+$cartItems = [];
+if (isset($_SESSION['cartItems'])) {
+    $cartItems = $_SESSION['cartItems'];
+}
+// echo json_encode($cartItems);
+// exit; 
+?>
 
 <body>
     <?php include "layouts/navbar.php" ?>
@@ -12,8 +20,8 @@
             <thead class="h5">
                 <tr>
                     <th scope="col">Id</th>
-                    <th colspan="2">Item</th>
-                    <th scope="col">Category</th>
+                    <th colspan="2">Book</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Unit Price</th>
                     <th scope="col">Total Price</th>
@@ -21,135 +29,41 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td colspan="2">Apple</td>
-                    <td>Fruit</td>
-                    <td>2</td>
-                    <td>$1.00</td>
-                    <td>$2.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td colspan="2">Orange</td>
-                    <td>Fruit</td>
-                    <td>3</td>
-                    <td>$0.50</td>
-                    <td>$1.50</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colspan="2">Banana</td>
-                    <td>Fruit</td>
-                    <td>4</td>
-                    <td>$0.25</td>
-                    <td>$1.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td colspan="2">Carrot</td>
-                    <td>Vegetable</td>
-                    <td>5</td>
-                    <td>$0.10</td>
-                    <td>$0.50</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td colspan="2">Potato</td>
-                    <td>Vegetable</td>
-                    <td>6</td>
-                    <td>$0.20</td>
-                    <td>$1.20</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td colspan="2">Milk</td>
-                    <td>Dairy</td>
-                    <td>1</td>
-                    <td>$2.00</td>
-                    <td>$2.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td colspan="2">Eggs</td>
-                    <td>Dairy</td>
-                    <td>12</td>
-                    <td>$0.50</td>
-                    <td>$6.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td colspan="2">Bread</td>
-                    <td>Grain</td>
-                    <td>2</td>
-                    <td>$3.00</td>
-                    <td>$6.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td colspan="2">Cereal</td>
-                    <td>Grain</td>
-                    <td>1</td>
-                    <td>$5.00</td>
-                    <td>$5.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td colspan="2">Soda</td>
-                    <td>Drink</td>
-                    <td>2</td>
-                    <td>$2.00</td>
-                    <td>$4.00</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
+                <?php
+                $totalQty=0;
+                $grandTotal = 0;
+        
+                foreach ($cartItems as $index => $item) {
+                    $total = $item['price'] * $item['quantity'];
+                    $totalQty +=$item['quantity'];
+                    $grandTotal +=$total;
+                ?>
+                    <tr>
+                        <td><?= $index + 1 ?></td>
+                        <td colspan="2"><img src="../admin-be/upload/<?= $item['image'] ?>" alt="" width="70px" height="70px"></td>
+                        <td><?= $item['name'] ?></td>
+                        <td><?= $item['quantity'] ?></td>
+                        <td><?= $item['price'] ?></td>
+                        <td><?= $total ?></td>
+                        <form action="add_to_cart.php" method="POST">
+                            <td><button name="remove" class="btn btn-danger">Remove</button></td>
+                            <td><input type="hidden" name="index" value="<?= $index ?>"></td>
+                        </form>
+                    </tr>
+                <?php
+                } ?>
             </tbody>
         </table>
         <div class="container">
             <div class="d-flex justify-content-around">
                 <p>Total Quantity</p>
-                <p id="totalQty"></p>
-                <p>Total Price</p>
-                <p id="totalPrice"></p>
-                <button type="button" class="btn btn-outline-secondary">Order Now</button>
+                <p id="totalQty"> <?= $totalQty?></p>
+                <p>Grand Total</p>
+                <p id="totalPrice"><?= $grandTotal ?></p>
+                <form action="order.php" method="post">
+                    <input type="hidden" name="total" value="<?=$grandTotal?>">
+                    <button type="submit" class="btn btn-outline-secondary">Order Now</button>
+                </form>
             </div>
         </div>
     </div>
